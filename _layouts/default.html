@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <title>{{ site.title }} - {{ site.description }}</title>
+    <meta name="description" content="{{ site.meta_description}}" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
+    <!-- Customisation  -->
+    <link rel="stylesheet" type="text/css" href="{{'/assets/css/main.css' | relative_url}} " />
+    
+    
+    
+{% include toggle_dark_mode.js %}
+</head>
+<body class="{% if page.post_class %}{{page.post_class}}{% else %}home-template{% endif %}">
+
+    <header class="main-header {% if page.cover %}" style="background-image: url({{ page.cover }}) {%else%}no-cover{% endif %}">
+      <nav class="main-nav overlay clearfix">
+                       <!-- TODO a class="subscribe-button icon-feed" href="{{'feed.xml' | relative_url }} ">Subscribe</a-->
+          {% include toggle_dark_mode.html %}
+      </nav>
+      <div class="vertical">
+          <div class="main-header-content inner">
+             <h1 class="page-title">
+                {% if site.logo %}
+                     <img class="author-logo" src="{{'/assets/images/profile.png' | relative_url}}" alt="Author's profile picture" nopin="nopin" />
+                {% endif %}
+             </h1>
+             <h1 class="page-title">{{ site.title }}</h1>
+              <p class="page-description">
+                 {% if site.description %} {{ site.description }} {% endif %}
+              </p>
+              <p class="page-nav-links">
+                <a href='/' class="page-nav-links">home</a> 
+                {% for static_page in site.static_pages %}
+                | <a href='{{ static_page | relative_url}}.html' class="page-nav-links">{{ static_page }}</a>
+                {% endfor %}
+              </p>
+          </div>
+      </div>
+      <a class="scroll-down icon-arrow-left" href="#content" data-offset="-45"><span class="hidden">Scroll Down</span></a>
+  </header>
+
+    {{ content }}
+    <footer class="site-footer clearfix">
+      <section class="copyright">
+        <a href="{{ site.baseurl }}">{{ site.title }}</a> &copy; 
+              {{"now" | date: "%Y"}} &bull; All rights reserved.
+      </section>
+      <section class="poweredby">Made with Jekyll using 
+        <a href="http://github.com/ashisha/xminy">xminy theme</a>
+      </section>
+    </footer>
+    
+    <script type="text/javascript" src="{{'/assets/js/jquery-1.11.1.min.js' | relative_url}}"></script>
+    <script type="text/javascript" src="{{'/assets/js/jquery.fitvids.js' | relative_url }}"></script>
+    <script type="text/javascript" src="{{'/assets/js/index.js' | relative_url }}"></script>
+
+    <!-- Google Analytics Tracking code -->
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', '{{ site.google_analytics }}']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>   
+</body>
+</html>
