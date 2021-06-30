@@ -15,7 +15,7 @@ title: xminy
 email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
   Super minimal, functional, and fast theme for Jekyll
-meta_description: "xminy - Super minimal, functional, and fast theme for Jekyll inspired by Kasper and Casper. Supports dark mode."
+meta_description: "xminy - xminy is minimal, functional and high performance theme for Jekyll. Supports dark mode."
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: ashisha
