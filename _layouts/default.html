@@ -38,7 +38,7 @@
                  {% if site.description %} {{ site.description }} {% endif %}
               </p>
               <p class="page-nav-links">
-                <a href='/' class="page-nav-links">home</a> 
+              <a href='{{ "/" | relative_url }}' class="page-nav-links">home</a> 
                 {% for static_page in site.static_pages %}
                 | <a href='{{ static_page | relative_url}}.html' class="page-nav-links">{{ static_page }}</a>
                 {% endfor %}
