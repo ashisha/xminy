@@ -141,8 +141,9 @@ table { border-collapse: collapse; border-spacing: 0; }
     content: "\f602";
     font-size: 1.1em;
 }
-.icon-google-plus:before {
-    content: "\f603";
+.icon-linkedin:before {
+    content: "\f609";
+    font-size: 1.1em;
 }
 .icon-facebook:before {
     content: "\f604";
@@ -722,7 +723,7 @@ body:not(.post-template) .post-title {
 
 .post-meta {
     display: block;
-    margin: 1.75rem 0 0 0;
+    margin: 1.75rem 0;
     font-family: "Open Sans", sans-serif;
     font-size: 1.5rem;
     line-height: 2.2rem;
@@ -911,7 +912,6 @@ body:not(.post-template) .post-title {
 .post-footer .share a {
     font-size: 1.8rem;
     display: inline-block;
-    margin: 1rem 1.6rem 1.6rem 0;
     color: #BBC7CC;
     text-decoration: none;
 }
@@ -1838,7 +1838,7 @@ p code, li code {
 /* The author credit area after the post */
 .post-footer {
     position: relative;
-    margin: 6rem 0 0 0;
+    margin: 6rem 0 200px 0;
     padding: 6rem 0 0 0;
     border-top: #EBF2F6 1px solid;
     border-top: var(--text) 1px solid;
@@ -1893,4 +1893,14 @@ p code, li code {
     max-height: 40%;
 }
 
+.icon-share {
+    padding: 0 0.25em;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 600;
+    font-family: "Open Sans", sans-serif;
+    color: var(--nav-links);
+    border: 1px var(--bg) solid;
+    margin: 0;
+}
 

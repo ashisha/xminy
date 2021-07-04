@@ -17,7 +17,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   Super minimal, functional, and fast theme for Jekyll
 meta_description: "xminy - xminy is minimal, functional and high performance theme for Jekyll. Supports dark mode."
 baseurl: "/xminy" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "http://ashisha.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: ashisha
 github_username:  ashisha
 about: about.html
@@ -27,12 +27,10 @@ markdown: kramdown
 highlighter: rouge
 logo: profile.png
 paginate: 15
-domain_name: "http://yourblog-domain.com"
 google_analytics: "UA-XXXXXXXX-X"
 plugins: [jekyll-paginate]
 
 # Details for the RSS feed generator
-url: ""
 author: "Ashish Anand"
 
 # Disqus config
